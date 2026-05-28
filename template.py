@@ -140,6 +140,7 @@ def compare_models(prompt: str) -> dict:
         (0.75 words ≈ 1 token is a rough approximation)
     """
     # TODO: call call_openai and call_openai_mini, assemble and return the dict
+
     gpt4o_response, gpt4o_latency = call_openai(prompt)
     mini_response, mini_latency = call_openai_mini(prompt)
     gpt4o_cost_estimate = (

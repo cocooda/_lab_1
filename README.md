@@ -125,3 +125,41 @@ Tất cả kiểm thử dùng `unittest.mock` — **không cần API key thật*
 - [ ] `pytest tests/ -v` — tất cả kiểm thử pass
 - [ ] `solution/exercises.md` — tất cả câu trả lời đã điền
 - [ ] `solution/solution.py` — triển khai cuối cùng của bạn
+
+## Hoàn Thành Bài Lab
+
+Tất cả nhiệm vụ trong bài lab đã được triển khai và kiểm thử thành công, bao gồm:
+
+- call_openai
+- call_openai_mini
+- compare_models
+- streaming_chatbot
+- retry_with_backoff
+- batch_compare
+- format_comparison_table
+
+Toàn bộ test đều pass với lệnh:
+
+pytest tests/ -v
+
+## Simple UI Demo (Streamlit)
+
+Ngoài yêu cầu cơ bản của bài lab, project còn được mở rộng với một giao diện web đơn giản sử dụng Streamlit để trực quan hóa việc so sánh giữa GPT-4o và GPT-4o-mini.
+
+Cài đặt Streamlit
+pip install streamlit
+Chạy ứng dụng demo
+streamlit run app.py
+
+Ứng dụng hỗ trợ:
+
+- Nhập prompt trực tiếp từ giao diện web
+- So sánh phản hồi giữa GPT-4o và GPT-4o-mini
+- Hiển thị latency của từng model
+- Ước tính chi phí output token
+- Giao diện trực quan và dễ sử dụng
+
+### Ghi Chú
+File .env và thư mục venv/ đã được thêm vào .gitignore để tránh upload thông tin nhạy cảm và dependency không cần thiết.
+Project sử dụng python-dotenv để load API key từ biến môi trường.
+Tất cả kiểm thử sử dụng unittest.mock, vì vậy không yêu cầu API key thật khi chạy pytest.
